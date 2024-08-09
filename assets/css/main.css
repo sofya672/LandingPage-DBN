@@ -1349,7 +1349,13 @@ section,
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing {
-  padding: 60px 0;
+  padding: 60px 20px; /* Padding atas-bawah, kanan-kiri */
+}
+
+.pricing .container {
+  max-width: 1200px; /* Maksimalkan lebar container */
+  margin: 0 auto; /* Agar container terpusat */
+  padding: 0 20px; /* Tambahkan padding kanan dan kiri untuk memberi jarak */
 }
 
 .pricing .section-title {
@@ -1377,7 +1383,6 @@ section,
   color: var(--background-color);
   font-size: 28px;
 }
-
 
 .pricing-item {
   background-color: var(--surface-color);
@@ -1410,19 +1415,21 @@ section,
 }
 
 .pricing-item h4 {
-  font-size: 48px;
-  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pricing-item .price {
+  font-size: 32px;
+  color: #f44336; /* Warna merah */
   font-weight: 700;
-  margin-bottom: 25px;
 }
 
-.pricing-item h4 sup {
-  font-size: 28px;
-}
-
-.pricing-item h4 span {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 18px;
+.pricing-item .per-month {
+  font-size: 16px;
+  color: gray;
 }
 
 .pricing-item .buy-btn {
@@ -1442,7 +1449,7 @@ section,
 }
 
 .pricing-item.featured {
-  border: 3px solid var(--accent-color);
+  border: none; /* Menghapus border merah pada card BUSINESS */
   z-index: 10;
 }
 
